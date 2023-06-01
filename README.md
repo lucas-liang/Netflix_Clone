@@ -15,7 +15,7 @@ Check it out [HERE](https://netflix-clone-one-pink.vercel.app/).
 <br>
 
 ## Actor Information
-<img src = "./readMe_images/actorInfo.jpg"/>
+<img src = "./readMe_images/actorInfo.png"/>
 <br>
 
 # What I Learned
