@@ -19,7 +19,7 @@ Check it out [HERE](https://netflix-clone-one-pink.vercel.app/).
 <br>
 
 # What I Learned
-* How to use react hooks to create a responsive and fast web application.
-* How to use React Routers to simplify and quicken re-rendering of the page.
-* How to implement basic lazy-load caching by creating Express middleware with node-cache to speed up render times.
-* How to decompose, organize, and construct a large project.
+* Strategies for using React Hooks to create a responsive and fast web application.
+* Implemented React Routers to simplify and quicken re-rendering of the page.
+* Created Express middleware with node-cache to implement lazy-load caching and speed up render times.
+* Approaches for decomposing, organizing, and constructing a large project.
