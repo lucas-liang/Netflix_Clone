@@ -10,12 +10,12 @@ Script file that contains functions that allow for the front-end to call the rel
 // get movies based on the genre name that was clicked
 // http://localhost:5000
 // const URL =
-const URL = 'http://localhost:5000';
+const URL = 'https://netflix-clone-bdvj.onrender.com';
 export async function getMoviesByGenre(genreName){
     if(genreName === ''){
         return;
     }
-    const genres = await fetch ('http://localhost:5000/genres/get/genreIDs');
+    const genres = await fetch (`${URL}/genres/get/genreIDs`);
     const IDs = await genres.json();
     if(genreName === "Science_Fiction"){
         genreName = "Science Fiction";
@@ -26,7 +26,7 @@ export async function getMoviesByGenre(genreName){
             genreID = IDs.genres[i].id;
         }
     }
-    const movies = await fetch (`http://localhost:5000/genres/get/${genreID}`);
+    const movies = await fetch (`${URL}/genres/get/${genreID}`);
     const data = await movies.json();
     return(data);
 }
@@ -37,14 +37,14 @@ export async function getMovieByID(movieID){
     if (movieID === ''){
         return [];
     }
-    const response = await fetch(`http://localhost:5000/movies/movieInfo/${movieID}`);
+    const response = await fetch(`${URL}/movies/movieInfo/${movieID}`);
     const data = await response.json();
     return data;
 }
 
 // get all popular movies for the popular category
 export async function getPopularMovies(){
-    const response = await fetch(`http://localhost:5000/categories/popular`);
+    const response = await fetch(`${URL}/categories/popular`);
     const data = response.json();
     return data;
 
@@ -52,7 +52,7 @@ export async function getPopularMovies(){
 
 // get upcoming movies for the upcoming category
 export async function getUpcomingMovies(pageNumber){
-    const response = await fetch(`http://localhost:5000/categories/upcoming/${pageNumber}`);
+    const response = await fetch(`${URL}/categories/upcoming/${pageNumber}`);
     const data = response.json();
     return data;
 
@@ -60,7 +60,7 @@ export async function getUpcomingMovies(pageNumber){
 
 // get the highest rated movies for Top Rated category
 export async function getTopRatedMovies(){
-    const response = await fetch(`http://localhost:5000/categories/topRated`);
+    const response = await fetch(`${URL}/categories/topRated`);
     const data = response.json();
     return data;
 
@@ -71,7 +71,7 @@ export async function searchMovies(searchTerm){
     if(searchTerm === ''){
         return [];
     }
-    const response = await fetch(`http://localhost:5000/movies/keyword/${searchTerm}`)
+    const response = await fetch(`${URL}/movies/keyword/${searchTerm}`)
     const data = await response.json();
     return data;
     
@@ -82,13 +82,13 @@ export async function getActorDetails(actorName){
     if(actorName === ''){
         return [];
     }
-    const response = await fetch(`http://localhost:5000/actors/get/${actorName}`);
+    const response = await fetch(`${URL}/actors/get/${actorName}`);
     const data = await response.json();
     const actorID = data[0].id;
     if(actorID === undefined){
         return [];
     }
-    const actorInfo = await fetch(`http://localhost:5000/actors/getID/${actorID}`);
+    const actorInfo = await fetch(`${URL}/actors/getID/${actorID}`);
     const actorDetails= await actorInfo.json();
     return actorDetails;
 }
