@@ -1,0 +1,33 @@
+.Actor{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    width: 12%;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+
+.ActorPoster{
+    border-radius: 3%;
+    height: 100%;
+    width: 100%;
+
+}
+.Actor h2{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#ActorCollection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    flex-direction: row;
+}

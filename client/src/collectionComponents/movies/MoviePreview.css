@@ -1,0 +1,83 @@
+.moviePreview{
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.movieImage{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+
+}
+
+.moviePoster{
+    width: 70%;
+}
+
+#movieInfo{
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    justify-content: top;
+    align-items:center;
+    font-size:1.5em;
+}
+
+.movieInfo{
+    color: white;
+}
+
+
+
+.movieOverview{
+    margin-right: 5%;
+
+}
+
+.Trailer{
+    padding-top: 2%;
+	display: flex;
+	font-size: 1.5em;
+    float: left;
+    padding-bottom: 2%;
+    flex-direction: column;
+}
+
+.ReleaseDate{
+    margin-top: 3%;
+    float:right;
+    margin-right: 5%;
+
+}
+
+.movieOverview{
+    margin-top: 10%;
+}
+
+.cast{
+    text-align: left;
+    font-size: 3em;
+    margin-left: 5%;
+}
+
+.recommended{
+    text-align: left;
+    font-size: 3em;
+    margin-left: 5%;
+    color:white;
+}
+
+.TrailerText{
+    padding-bottom: 2%;
+}
+
+.light{
+    color: black;
+}

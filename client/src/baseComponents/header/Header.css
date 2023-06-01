@@ -1,0 +1,96 @@
+*{
+    margin:0;
+}
+
+#Header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 12.5% 12.5% 50% 25%;
+    margin: 0;
+}
+
+.Header{
+    background-color: black;
+}
+
+#Home{
+    display: flex;
+    align-items: center;
+
+}
+
+#Mode{
+    display: flex;
+    align-items: center;
+}
+
+#ModeIcon{
+    height: 1.5vw;
+}
+
+.DarkIcon{ 
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+#Input{
+    display: flex;
+    margin: auto;
+
+}
+
+#Search{
+   border-top-style: hidden;
+   border-right-style: hidden;
+   border-left-style: hidden;
+   border-bottom-style: groove;
+   border-bottom-color:white;
+   color: white;
+}
+
+.Search{
+    background-color: #000000;
+}
+
+#SearchIcon{
+    height: 1.1vw;
+    padding-right: 1vw;
+    border-bottom-color:white;   
+}
+
+.SearchIcon{
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+} 
+
+#Login{
+    display: flex;
+    justify-content: right;
+    padding-right: 10%;
+    align-items: center;
+}
+
+#LoginIcon{
+    height: 1.5vw;
+}
+
+.LoginIcon{
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
+
+.invert{
+    filter: none;
+}
+
+#HomeIcon{
+    height: 1.5vw;
+}
+
+.HomeIcon{ 
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+

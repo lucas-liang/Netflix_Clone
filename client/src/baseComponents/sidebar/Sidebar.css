@@ -1,0 +1,164 @@
+*{
+   margin:0;
+}
+
+.Genre{
+   height: 3vw;
+   filter: invert(100%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+
+#Action{
+   display: flex;
+   align-items: center;
+ }
+ 
+#Adventure{
+   display: flex;
+   align-items: center;
+ }
+
+ #Animation{
+   display: flex;
+   align-items: center;
+ }
+
+ #Comedy{
+   display: flex;
+   align-items: center;
+ }
+
+ #Crime{
+   display: flex;
+   align-items: center;
+ }
+
+ #Documentary{
+   display: flex;
+   align-items: center;
+ }
+
+ #Drama{
+   display: flex;
+   align-items: center;
+ }
+
+ #Family{
+   display: flex;
+   align-items: center;
+
+ }
+
+ #Fantasy{
+   display: flex;
+   align-items: center;
+ }
+
+ #History{
+   display: flex;
+   align-items: center;
+ }
+
+ #Horror{
+   display: flex;
+   align-items: center;
+
+ }
+
+ #Music{
+   display: flex;
+   align-items: center;
+ }
+
+ #Mystery{
+    display: flex;
+    align-items: center;
+ }
+
+ #Popular{
+    display: flex;
+    align-items: center;
+ }
+
+ #Romance{
+    display: flex;
+    align-items: center;
+ }
+
+ #Science_Fiction{
+    display: flex;
+    align-items: center;
+ }
+
+ #Thriller{
+    display: flex;
+    align-items: center;
+ }
+
+ #Top_Rated{
+    display: flex;
+    align-items: center;
+ }
+
+ #Upcoming{
+    display: flex;
+    align-items: center;
+ }
+
+ #War{
+    display: flex;
+    align-items: center;
+ }
+
+ #Western{
+    display: flex;
+    align-items: center;
+ }
+
+.Category{
+   height: 2vw;
+   filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+#Sidebar{
+    width: 11%;
+    border-right: solid grey;
+    border-right-width: thick;
+    background-color: black;
+    color: white;
+    margin: 0;
+    align-items: center;
+    height: 100vh;
+   }
+
+#SidebarScroll{
+   overflow-y: scroll;
+   height: 100%;
+}
+
+.Logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+#Logo{
+    height: 4vw;
+    width: 11vw;
+}
+
+#CategoryText{
+   display: flex;
+   padding-bottom:.5vw;
+   padding-top: .5vw;
+}
+
+#GenreText{
+   display: flex;
+   padding-bottom:.5vw;
+   padding-top: .5vw;
+}
+
+.invert{
+   filter: none;
+}

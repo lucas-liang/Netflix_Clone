@@ -1,0 +1,22 @@
+
+#App{
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+#Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+
+#ContainerScroll{
+    height:100%; 
+    overflow-y: scroll; 
+ } 
+

@@ -1,0 +1,39 @@
+.Movie{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    width: 12%;
+    overflow: hidden;
+    color: inherit;
+    text-align: center;
+}
+
+.MoviePoster{
+    border-radius: 3%;
+    height: 100%;
+    width: 100%;
+
+}
+.Movie h2{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#MovieCollection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.MovieCollection{
+    color: white;
+}
+
+.light{
+    color: black;
+} 

@@ -1,0 +1,23 @@
+
+#Banner{
+    margin: .5% 2%;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.BannerImage{
+    width: 100%;
+    filter: brightness(60%);
+    margin-top:1%;
+
+
+}
+
+#Description{
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    width:40%;
+    font-size: 1.7vw;
+}
