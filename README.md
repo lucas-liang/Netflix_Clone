@@ -1,5 +1,6 @@
 # Netflix Clone
-React app that uses the TMDB API to display movie and actor information.
+Full MERN stack web app that uses the TMDB API 
+to display movie and actor information.
 Check it out [HERE](https://netflix-clone-one-pink.vercel.app/).
 
 ## Movie Banner
@@ -18,8 +19,17 @@ Check it out [HERE](https://netflix-clone-one-pink.vercel.app/).
 <img src = "./readMe_images/actorInfo.png"/>
 <br>
 
+## Favorite Actors
+<img src = './readMe_images/favoriteActors.png'/>
+<br>
+
+## Favorite Movies
+<img src = './readMe_images/favoriteMovies.png'/>
+<br>
+
 # What I Learned
 * Strategies for using React Hooks to create a responsive and fast web application.
 * Implemented React Routers to simplify and quicken re-rendering of the page.
 * Created Express middleware with node-cache to implement lazy-load caching and speed up render times.
 * Approaches for decomposing, organizing, and constructing a large project.
+* Implementing a basic CRUD API for MongoDB using Mongoose
