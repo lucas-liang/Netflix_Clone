@@ -32,4 +32,4 @@ Check it out [HERE](https://netflix-clone-one-pink.vercel.app/).
 * Implemented React Routers to simplify and quicken re-rendering of the page.
 * Created Express middleware with node-cache to implement lazy-load caching and speed up render times.
 * Approaches for decomposing, organizing, and constructing a large project.
-* Implementing a basic CRUD API for MongoDB using Mongoose
+* Implemented a basic CRUD API for MongoDB using Mongoose.
