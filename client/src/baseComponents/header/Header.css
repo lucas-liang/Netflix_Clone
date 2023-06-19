@@ -29,9 +29,10 @@
     height: 1.5vw;
 }
 
-.DarkIcon{ 
+.modeIcon{ 
     filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
 }
+
 
 #Input{
     display: flex;
@@ -45,11 +46,11 @@
    border-left-style: hidden;
    border-bottom-style: groove;
    border-bottom-color:white;
-   color: white;
 }
 
 .Search{
     background-color: #000000;
+    color: white;
 }
 
 #SearchIcon{
@@ -77,14 +78,7 @@
     filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
 }
 
-.light{
-    background-color: white;
-    color: black;
-}
 
-.invert{
-    filter: none;
-}
 
 #HomeIcon{
     height: 1.5vw;
@@ -94,3 +88,47 @@
     filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
 }
 
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+    height: 1.5vw;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 40%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: inherit;}
+
+  .light{
+    background-color: white;
+    color: black;
+  }
+  .invert{
+    filter: none;
+}

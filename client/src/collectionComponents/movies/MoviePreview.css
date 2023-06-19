@@ -17,6 +17,10 @@
 
 }
 
+.movieRelease{
+    display: flex;
+    flex-direction: row;
+}
 .moviePoster{
     width: 70%;
 }
@@ -52,8 +56,8 @@
 
 .ReleaseDate{
     margin-top: 3%;
-    float:right;
     margin-right: 5%;
+    margin-left: auto;
 
 }
 
@@ -80,4 +84,19 @@
 
 .light{
     color: black;
+}
+
+.favoriteMovie{
+    margin-top: 3.5%;
+    margin-left: 5%;
+}
+#favoriteMovie{
+    height: 1.5vw;
+}
+.favoriteMovie{ 
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+.invert{
+    filter: none;
 }

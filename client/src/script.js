@@ -1,16 +1,18 @@
 /*
 Script file that contains functions that allow for the front-end to call the relevant back-end route
 
+1.1 - Added functions for MongoDB database calls
+
 @author Lucas Liang
-@version 1.0
-@since 31 May 2023
+@version 1.1
+@since 19 June 2023
 
 */
 
 // get movies based on the genre name that was clicked
-// http://localhost:5000
-// const URL =
+// const URL = 'http://localhost:5000'
 const URL = 'https://netflix-clone-bdvj.onrender.com';
+// get movies based on the genre name that was clicked
 export async function getMoviesByGenre(genreName){
     if(genreName === ''){
         return;
@@ -91,6 +93,204 @@ export async function getActorDetails(actorName){
     const actorInfo = await fetch(`${URL}/actors/getID/${actorID}`);
     const actorDetails= await actorInfo.json();
     return actorDetails;
+}
+
+// get actorInfo by ID
+export async function getActorByID(actorID){
+    const response = await fetch(`${URL}/actors/getID/${actorID}`);
+    const data = await response.json();
+    return data;
+}
+
+// add a user to the database
+export async function addUser(username, password){
+    const response = await fetch(`${URL}/users/new`, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    });
+    const data = await response.json();
+    return data;
+}
+
+// see if a username is available or not in the database
+export async function checkUsername(username){
+    const response = await fetch(`${URL}/users/names`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username})
+    });
+    const data = await response.json();
+    return data;
+}
+
+// see if a username password combination is valid
+export async function checkCredentials(username, password){
+    const response = await fetch(`${URL}/users/verify`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({username, password})
+});
+    const data = await response.json();
+    return data;
+}
+
+// add a movie to the user's favorite_movies list
+export async function addFavoriteMovie(username, movieID){
+    const response = await fetch(`${URL}/userMovies/addMovie`, {
+        method: 'POST',
+        headers:
+        {'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username, movieID})
+});
+    const data = await response.json();
+    return data;
+}
+
+// remove a movie from the user's favorite_movies list
+export async function removeFavoriteMovie(username, movieID){
+    const response = await fetch(`${URL}/userMovies/removeMovie`,{
+    method: 'POST',
+    headers:{'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({username, movieID})
+    });
+    const data = await response.json();
+    return data;
+}
+
+// see if the user has favorited a movie or not
+export async function isFavoriteMovie(username, movieID){
+    const response = await fetch (`${URL}/userMovies/check`,{
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({username, movieID})
+})
+    const data = await response.json();
+    return data;
+
+}
+
+// add an actor to the user's favorite_actors list
+export async function addFavoriteActor(username, actorID){
+    const response = await fetch(`${URL}/userActors/addActor`,{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username, actorID})
+    })
+        const data = await response.json();
+        return data;
+}
+
+// remove an actor from the user's favorite_actors list
+export async function removeFavoriteActor(username, actorID){
+    const response = await fetch(`${URL}/userActors/removeActor`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username, actorID})
+    })
+        const data = await response.json();
+        return data;
+}
+
+// check to see if the user has favorited the actor or not
+export async function isFavoriteActor(username, actorID){
+    const response = await fetch (`${URL}/userActors/check`,{
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({username, actorID})
+})
+    const data = await response.json();
+    return data;
+
+}
+
+// grab all movieIDs the user has favorited
+export async function getFavoriteMovies(username){
+    const response = await fetch(`${URL}/userMovies/getFavorites`,{
+    method: 'POST',
+    headers:{
+        'Content-Type' : 'application/json'
+        },
+    body: JSON.stringify({username})
+    })
+    const data = await response.json();
+    return data;
+}
+
+// grab all of the actorIDs the user has favorited
+export async function getFavoriteActors(username){
+    const response = await fetch(`${URL}/userActors/getFavorites`,{
+    method: 'POST',
+    headers:{
+        'Content-Type' : 'application/json'
+        },
+    body: JSON.stringify({username})
+    })
+    const data = await response.json();
+    return data;
+}
+
+// delete a user from the database
+export async function deleteUser(username){
+    const response = await fetch(`${URL}/users/delete`,{
+        method: 'POST',
+        headers:{
+            'Content-Type' : 'application/json'
+            },
+        body: JSON.stringify({username})
+        })
+        const data = await response.json();
+        return data;
+}
+
+// allow a username to update their username if available
+export async function updateUsername(username, newUsername){
+    let updateData = {updated: 'false'};
+    const response = await fetch(`${URL}/users/names`,{
+        method: 'POST',
+        headers:{
+            'Content-Type' : 'application/json'
+            },
+        body: JSON.stringify({username: newUsername})
+        })
+        const data = await response.json();
+        if(data.available === 'false'){
+            return updateData;
+        }
+    const updateResponse = await fetch(`${URL}/users/updateUsername`,{
+        method: 'POST',
+        headers:{
+            'Content-Type' : 'application/json'
+            },
+        body: JSON.stringify({username, newUsername})
+        })
+        updateData = await updateResponse.json();
+    return updateData;   
+}
+
+// allow for a user to update their password
+export async function updatePassword(username, newPassword){
+    const updateResponse = await fetch(`${URL}/users/updatePassword`,{
+        method: 'POST',
+        headers:{
+            'Content-Type' : 'application/json'
+            },
+        body: JSON.stringify({username, newPassword})
+        })
+        const updateData = await updateResponse.json();
+    return updateData; 
+
 }
 
 

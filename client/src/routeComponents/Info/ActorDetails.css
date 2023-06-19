@@ -1,0 +1,78 @@
+.actorPreview{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.actorContainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+.actorImage{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+
+}
+
+.actorPoster{
+    width: 30%;
+    height: 4%;
+}
+
+.actorInfo{
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    justify-content: top;
+    color: white;
+    align-items:center;
+    font-size:1.5em;
+}
+
+.actorData{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.actorAge{
+    flex: 3.6;
+}
+
+
+.actorHome{
+    flex: 2;
+    margin-left:10%;
+}
+
+.actorOverview{
+    margin-right: 5%;
+
+}
+
+
+.actorOverview{
+    margin-top: 10%;
+}
+
+.favoriteWrapper{
+    flex: 1; 
+}
+#favoriteActor{
+    height: 1.5vw;
+}
+
+.favoriteActor{ 
+    filter: invert(97%) sepia(8%) saturate(2%) hue-rotate(299deg) brightness(119%) contrast(100%);
+}
+
+.invert{
+    filter: none;
+}

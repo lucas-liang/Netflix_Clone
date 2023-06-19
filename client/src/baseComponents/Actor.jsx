@@ -1,9 +1,12 @@
 /*
 Component that displays the actor's image, name and role.
 
+
+1.1 - navigate Route changed
+
 @author Lucas Liang
-@version 1.0
-@since 31 May 2023
+@version 1.1
+@since 19 June 2023
 */ 
 
 import '../collectionComponents/actors/ActorCollection.css'
@@ -14,7 +17,7 @@ const Actor = ({actor}) => {
     function handleClick(event){
         let name = event.target.id;
         // pass the actor name as a parameter
-        navigate(`/Actor/${name}`);
+        navigate(`/info/Actor/${name}`);
     }
     
         

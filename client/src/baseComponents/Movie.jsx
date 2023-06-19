@@ -1,9 +1,11 @@
 /*
 Component that displays the image, title, and rating for a movie.
 
+1.1 - navigate Route changed
+
 @author Lucas Liang
-@version 1.0
-@since 31 May 2023
+@version 1.1
+@since 19 June 2023
 */
 
 import '../collectionComponents/movies/MovieCollection.css'
@@ -12,7 +14,7 @@ const Movie = ({movie}) => {
     
     const navigate = useNavigate();
     function handleClick(event){
-        navigate(`/movie/${movie.id}`);
+        navigate(`/info/movie/${movie.id}`);
     }
         
     return(

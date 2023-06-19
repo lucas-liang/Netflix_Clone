@@ -1,9 +1,11 @@
 /*
 Component that finds a find random movie to feature and display, specificially for the upcoming category.
 
+1.1 - navigate Route changed
+
 @author Lucas Liang
-@version 1.0
-@since 31 May 2023
+@version 1.1
+@since 19 June 2023
 */
 
 import './Banner.css';
@@ -14,7 +16,7 @@ const UpcomingBanner = ({movieList}) => {
     const navigate = useNavigate();
 
     function handleClick(event){
-        navigate(`/movie/${movie.id}`);
+        navigate(`/info/movie/${movie.id}`);
     }
 
     let movie = null;

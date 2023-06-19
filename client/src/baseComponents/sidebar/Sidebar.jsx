@@ -1,9 +1,12 @@
 /*
 Component that includes all of the buttons on the side
 
+
+1.1 - navigate Route changed
+
 @author Lucas Liang
-@version 1.0
-@since 31 May 2023
+@version 1.1
+@since 19 June 2023
 */
 
 import Logo from '../../assets/images/Netflix-Logo.jpg';
@@ -38,7 +41,7 @@ const Sidebar = () => {
     function handleClick(event){
         let genre = event.target.id;
         // pass the genre name as a parameter
-        navigate(`/genre/${genre}`);
+        navigate(`/info/genre/${genre}`);
 }
     return(
         <div id = 'Sidebar'>
